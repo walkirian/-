@@ -1,22 +1,20 @@
-var op;
-
-function func() {
-  var result;
-  var num1 = Number(document.getElementById("num1").value);
-  var num2 = Number(document.getElementById("num2").value);
+function calc(op) {
+  let result;
+  let num1 = Number(document.getElementById("num1").value);
+  let num2 = Number(document.getElementById("num2").value);
   switch (op) {
-    case "+":
+    case "plus":
       result = num1 + num2;
       break;
-    case "-":
+    case "minus":
       result = num1 - num2;
       break;
-    case "*":
+    case "times":
       result = num1 * num2;
       break;
-    case "+":
+    case "divide":
       result = num1 / num2;
       break;
   }
-  document.getElementById("result").innerHTML = result;
+  document.getElementById("result").textContent = result;
 }
