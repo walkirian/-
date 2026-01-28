@@ -1,23 +1,39 @@
 <!doctype html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>хуятина</title>
+    <title>iPhone Калькулятор</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input id="num1" />
+    <div class="calculator">
+      <input id="num1" readonly />
 
-    <div>
-      <button onclick="calc('plus')">+</button>
-      <button onclick="calc('minus')">-</button>
-      <button onclick="calc('times')">*</button>
-      <button onclick="calc('divide')">/</button>
+      <div class="buttons">
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">/</button>
+
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">*</button>
+
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator">-</button>
+
+        <button class="number zero">0</button>
+        <button class="number">.</button>
+        <button class="operator">+</button>
+        <button class="operator equal">=</button>
+      </div>
     </div>
-    <input id="num2" />
-    <p id="result"></p>
+
     <script src="app.js"></script>
   </body>
 </html>

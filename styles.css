@@ -1,69 +1,94 @@
-/* Общий стиль страницы */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* Сброс базовых стилей */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Стили для input полей */
-input {
-  width: 80px;
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.2rem;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  text-align: center;
-  outline: none;
-  transition: 0.2s;
-}
-
-input:focus {
-  border-color: #5a67d8;
-  box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
-}
-
-/* Контейнер кнопок */
-#operatorsBTN {
+/* Фон */
+body {
   display: flex;
-  gap: 10px;
-  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
 }
 
-/* Стили для кнопок */
-button {
-  padding: 10px 20px;
-  font-size: 1.2rem;
+/* Контейнер калькулятора */
+.calculator {
+  width: 320px;
+  padding: 20px;
+  border-radius: 30px;
+  background: #1c1c1c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Поле ввода */
+#num1 {
+  width: 100%;
+  padding: 25px;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-align: right;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #5a67d8;
+  border-radius: 15px;
+  background: #2c2c2c;
   color: white;
-  transition: 0.2s;
 }
 
-button:hover {
-  background: #434190;
+/* Сетка кнопок */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 
-button:active {
-  transform: scale(0.95);
-}
-
-/* Стили для результата */
-#result {
-  margin-top: 15px;
+/* Кнопки */
+button {
+  padding: 20px 0;
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  min-width: 100px;
-  text-align: center;
-  padding: 10px;
-  background: #e2e8f0;
-  border-radius: 8px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 4px #999;
+}
+
+/* Эффект нажатия */
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px #666;
+}
+
+/* Числовые кнопки */
+button.number {
+  background: #333;
+  color: white;
+}
+
+/* Кнопка "0" растягивается на два столбца */
+button.zero {
+  grid-column: span 2;
+  border-radius: 50px;
+  text-align: left;
+  padding-left: 40px;
+}
+
+/* Кнопки операторов */
+button.operator {
+  background: #ff9500;
+  color: white;
+}
+
+/* Кнопка "=" */
+button.equal {
+  background: #ff9500;
+  color: white;
+}
+
+/* Наведение */
+button:hover {
+  opacity: 0.9;
 }
